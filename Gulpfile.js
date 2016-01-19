@@ -57,7 +57,7 @@ gulp.task('markup', function() {
 
 // Move Misc Files
 gulp.task('misc', function() {
-  gulp.src(['./*.ico', './*.txt'])
+  gulp.src(['./*.ico', './*.txt', 'CNAME'])
     .pipe(plumber())
     .pipe(gulp.dest('./public'));
 });
