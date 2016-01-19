@@ -1,0 +1,92 @@
+// Title Animation
+
+h1#name {
+  font-size: em(54);
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  color: $cm-blue;
+  line-height: 2.15em;
+  text-decoration: none;
+  padding: 0 0 0 0.2em;
+  margin: 1em 0 0 -0.1em;
+  @include transition-property(background);
+  @include transition-delay(0.3s);
+  @include transition-duration(0.6s);
+
+  @include media($medium-screen-up) {
+
+    &:hover {
+      background: none;
+      text-decoration: none;
+      color: #fff;
+      @include transition-property(background);
+      @include transition-delay(0s);
+      @include transition-duration(0.1s);
+    }
+  }
+
+  .cap,
+  .lower {
+    position: relative;
+    top: 0.05em;
+    @include transition-duration(0.5s);
+    @include inline-block;
+    letter-spacing: -0.42em;
+  }
+
+  .cap {
+    letter-spacing: -0.38em;
+  }
+
+  @include media($medium-screen-up) {
+
+    &:hover .cap,
+    &:hover .lower,
+    &:focus .cap,
+    &:focus .lower,
+    &:active .cap,
+    &:active .lower {
+      letter-spacing: -0.05em;
+      margin: 0;
+    }
+
+    &:hover .lower,
+    &:focus .lower,
+    &:active .lower {
+      opacity: 1;
+    }
+  }
+
+  .lower {
+    opacity: 0;
+  } 
+}
+
+h2.sub {
+  display: block;
+  clear: both;
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  pointer-events: none;
+  margin: 1em 0 2em;
+
+  @include media($medium-screen-up) {
+    @include transition-duration(0.1s);
+    @include transition-delay(0s);
+    position: relative;
+    top: -1em;
+    opacity: 0;
+    margin: 0 0 1em;
+
+    .active & {
+      @include transition-duration(1s);
+      @include transition-delay(0.5s);
+      opacity: 1;
+    }
+  }
+}

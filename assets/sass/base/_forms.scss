@@ -1,0 +1,90 @@
+fieldset {
+  background: lighten($base-border-color, 10);
+  border: $base-border;
+  margin: 0 0 ($base-spacing / 2) 0;
+  padding: $base-spacing;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: $base-spacing / 4;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+textarea,
+#{$all-text-inputs},
+select[multiple=multiple] {
+  color: white;
+  @include box-sizing(border-box);
+  @include transition(all 0.3s);
+  background-color: rgba(white, 0.05);
+  border-radius: 0px;
+  border: 1px solid rgba($form-border-color, 0.75);
+  border-width: 0 0 1px 0;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  margin-bottom: $base-spacing;
+  padding: ($base-spacing / 2) ($base-spacing / 3);
+  width: 100%;
+
+  &:focus {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $base-spacing / 4;
+}
+
+input[type="file"] {
+  padding-bottom: $base-spacing / 2;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: auto;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(white, 0.6);
+}
+
+:-moz-placeholder { // Firefox 18-
+   color: white;
+}
+
+::-moz-placeholder { // Firefox 19+
+   color: white;
+}
+
+:-ms-input-placeholder {
+   color: rgba(white, 0.6);
+}
