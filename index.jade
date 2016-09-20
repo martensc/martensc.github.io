@@ -46,12 +46,13 @@ html.no-js
         a.md-close(href='javascript:void(0);')
           img(src='images/ico_close.svg' title='Close' alt='Close')
         p.contact-title Hello there.
-        form(accept-charset='UTF-8' action='https://formkeep.com/f/c7a8f052c515' method='POST')
-          input(type='hidden' name='utf8' value='✓')
+        form(action='https://formspree.io/carlrmartens@gmail.com' method='POST')
           input(type='text' name='name' placeholder='Full Name')
-          input(type='text' name='email' placeholder='Email')
+          input(type='text' name='_replyto' placeholder='Email')
           textarea(name='message' placeholder='Message')
+          input(type='text' name='_gotcha' style='display:none')
           input(type='submit' value='Send' class='button')
+          input(type='hidden' name='_next' value='//carl-martens.com/thankyou.html')
 
     div.md-overlay
     div.loader
