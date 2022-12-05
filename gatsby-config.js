@@ -16,5 +16,18 @@ module.exports = {
     options: {
       "icon": "src/images/icon.png"
     }
+  },
+  {
+    resolve: "gatsby-omni-font-loader",
+    options: {
+      enableListener: true,
+      preconnect: ["https://fonts.googleapis.com", "https://fonts.gstatic.com"],
+      web: [
+        {
+          name: "Outfit",
+          file: "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap",
+        }
+      ],
+    }
   }]
 };
