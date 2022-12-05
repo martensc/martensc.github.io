@@ -46,4 +46,4 @@ const ContactPage = () => {
 
 export default ContactPage
 
-export const Head = () => <title>Carl Martens | Designer and Front-end Developer</title>
+export const Head = () => <title>Carl Martens | Contact</title>
