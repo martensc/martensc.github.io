@@ -184,7 +184,7 @@ textarea {
 textarea {
   max-width: 70ch;
 
-  @include respond-to('medium') {
+  @media (prefers-color-scheme: dark) {
     min-height: 3rem;
   }
 }
