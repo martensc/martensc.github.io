@@ -95,7 +95,7 @@ a {
 h1 {
   max-width: 12ch;
   line-height: var(--lineheight-tight);
-  font-size: clamp(2rem, 0.5rem + 6.666vw, 5.5rem);
+  font-size: clamp(2.5rem, 1.552rem + 4.210vw, 5.5rem);
   font-weight: 750;
   letter-spacing: var(--track-in);
   margin-block: 0 0.75em;
@@ -166,7 +166,7 @@ input[type='email'],
 select,
 textarea {
   display: block;
-  width: 100%;
+  width: -webkit-fill-available;
   max-width: 50ch;
   padding: 1rem;
   border-bottom: 2px solid var(--primary-color);
@@ -177,8 +177,8 @@ textarea {
 }
 
 textarea {
-  min-height: 6rem;
-  max-width: none;
+  min-height: 3rem;
+  max-width: 70ch;
 }
 
 button,
@@ -213,11 +213,11 @@ input[type='submit'] {
 // =============================================
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  margin-block: 3rem 5rem;
+
+  @include respond-to('medium') {
+    margin-block-start: 15vh;
+  }
 }
 
 .nav {
