@@ -134,7 +134,7 @@ h1 {
 }
 
 form {
-  margin-block-start: 5em;
+  margin-block-start: 2em;
 }
 
 label {
@@ -152,6 +152,7 @@ button {
   color: var(--primary-color);
   appearance: none;
   background-color: transparent;
+  border-radius: 0;
   border: none;
   padding: 0;
   margin: 0;
@@ -168,8 +169,12 @@ textarea {
   display: block;
   width: -webkit-fill-available;
   max-width: 50ch;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 2px solid var(--primary-color);
+
+  @include respond-to('medium') {
+    padding: 1rem;
+  }
 
   @media (prefers-color-scheme: dark) {
     border-color: var(--secondary-color);
@@ -177,8 +182,11 @@ textarea {
 }
 
 textarea {
-  min-height: 3rem;
   max-width: 70ch;
+
+  @include respond-to('medium') {
+    min-height: 3rem;
+  }
 }
 
 button,
