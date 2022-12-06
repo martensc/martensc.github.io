@@ -11,7 +11,7 @@ const IndexPage = () => {
       <div className="content">
         <h1 >Hello, my name is Carl Martens.</h1>
         <p className="lede">
-          I'm a senior designer and front-end developer living in the Twin Cities. I've been working in this industry for over 14 years and am passionate about my craft. Creating beautiful interfaces that fit seamlessly into websites and applications is what drives me each day. Feel free to write me for work inquiries.
+          I'm a senior designer and front-end developer living in the Twin Cities. I've been working in the web industry for over 14 years and am passionate about my craft. Creating beautiful interfaces that fit seamlessly into websites and applications is what drives me each day. Feel free to write me for work inquiries.
         </p>
         <nav className="nav">
           <Link to="/contact">Let's Talk</Link>
@@ -25,4 +25,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Carl Martens | Designer / Front-end Developer</title>
+export const Head = () => <title>Carl Martens | Designer and Front-end Developer</title>
