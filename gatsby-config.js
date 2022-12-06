@@ -6,7 +6,9 @@ module.exports = {
     title: `Carl-Martens.com`,
     siteUrl: `https://carl-martens.com`
   },
-  plugins: ["gatsby-plugin-sass", {
+  plugins: [
+    "gatsby-plugin-cname",
+    "gatsby-plugin-sass", {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
       "trackingId": "UA-11631620-1"
