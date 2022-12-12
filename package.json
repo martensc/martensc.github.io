@@ -16,6 +16,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "breakpoint-sass": "^3.0.0",
     "gatsby": "^5.2.0",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-cname": "^1.0.0",

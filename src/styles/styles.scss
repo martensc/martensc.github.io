@@ -1,29 +1,12 @@
-
 // =============================================
 // SCSS Stuff
 // =============================================
 
-@mixin respond-to($breakpoint) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  }
- 
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
-  }
-}
+@import './node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-$breakpoints: (
-  'small':  767px,
-  'medium': 992px,
-  'large':  1200px
-) !default;
+$bp1: 767px;
+$bp2: 992px;
+$bp3: 1200px;
 
 // =============================================
 // Globals
@@ -60,7 +43,7 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  @include respond-to('medium') {
+  @include breakpoint($bp2) {
     width: 90%;
     padding-left: 0;
     padding-right: 0;
@@ -172,7 +155,7 @@ textarea {
   padding: 0.5rem 1rem;
   border-bottom: 2px solid var(--primary-color);
 
-  @include respond-to('medium') {
+  @include breakpoint($bp2) {
     padding: 1rem;
   }
 
@@ -223,7 +206,7 @@ input[type='submit'] {
 .main {
   margin-block: 3rem 5rem;
 
-  @include respond-to('medium') {
+  @include breakpoint($bp2) {
     margin-block-start: 15vh;
   }
 }
