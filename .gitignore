@@ -1,10 +1,4 @@
-##########
-# Public #
-##########
-public/
-
-########
-# Misc #
-########
+node_modules/
+.cache/
+public
 *.DS_Store
-node_modules/*

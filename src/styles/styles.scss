@@ -1,0 +1,227 @@
+// =============================================
+// SCSS Stuff
+// =============================================
+
+@import './node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+$bp1: 767px;
+$bp2: 992px;
+$bp3: 1200px;
+
+// =============================================
+// Globals
+// =============================================
+
+:root {
+  --primary-color: hsl(240, 2%, 11%);
+  --secondary-color: hsl(204, 16%, 94%);
+  --container: 1200px;
+  --lineheight-nomral: 1.2;
+  --lineheight-tall: 1.5;
+  --lineheight-tight: 1;
+  --track-in: -0.025em;
+
+  font-size: 1.0625rem;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: var(--lineheight-nomral);
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include breakpoint($bp2) {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// =============================================
+// Typography
+// =============================================
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--secondary-color);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+:focus {
+  border-radius: 2px;
+  outline: dashed;
+  outline-offset: 0.1rem;
+}
+
+h1 {
+  max-width: 12ch;
+  line-height: var(--lineheight-tight);
+  font-size: clamp(2.5rem, 1.552rem + 4.210vw, 5.5rem);
+  font-weight: 750;
+  letter-spacing: var(--track-in);
+  margin-block: 0 0.75em;
+}
+
+.lede {
+  max-width: 40ch;
+  font-size: clamp(1rem, 0.571rem + 1.904vw, 2rem);
+  font-weight: 350;
+  line-height: var(--lineheight-tall);
+  margin-block: 1em;
+}
+
+.external {
+  &::after {
+    content: '';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-image: url('../images/icon-external.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-0.2rem);
+
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+// =============================================
+// Form
+// =============================================
+
+.form-row {
+  margin-block-end: 3rem;
+}
+
+form {
+  margin-block-start: 2em;
+}
+
+label {
+  display: block;
+  font-size: clamp(1rem, 0.914rem + 0.381vw, 1.2rem);
+  margin-block-end: 1rem;
+}
+
+fieldset,
+input,
+legend,
+select,
+textarea,
+button {
+  color: var(--primary-color);
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--secondary-color);
+  }
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  display: block;
+  width: -webkit-fill-available;
+  max-width: 50ch;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid var(--primary-color);
+
+  @include breakpoint($bp2) {
+    padding: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border-color: var(--secondary-color);
+  }
+}
+
+textarea {
+  max-width: 70ch;
+
+  @media (prefers-color-scheme: dark) {
+    min-height: 3rem;
+  }
+}
+
+button,
+input[type='submit'] {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+  }
+}
+
+// =============================================
+// Components
+// =============================================
+
+.main {
+  margin-block: 3rem 5rem;
+
+  @include breakpoint($bp2) {
+    margin-block-start: 15vh;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  font-size: clamp(1rem, 0.914rem + 0.381vw, 1.2rem);
+  margin-block-start: 5em;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
