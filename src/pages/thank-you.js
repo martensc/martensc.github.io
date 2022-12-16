@@ -1,10 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// Styles
-import "normalize.css"
-import "./../styles/styles.scss"
-
 const ThanksPage = () => {
   return (
     <main className="main container">
