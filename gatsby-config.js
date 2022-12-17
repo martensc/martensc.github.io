@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-cname",
+    "gatsby-plugin-postcss",
     "gatsby-plugin-sass", {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
