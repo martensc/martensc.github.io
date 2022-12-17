@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 
 const IndexPage = () => {
   return (
-    <main className="main container">
+    <main className="px-8 mt-12 lg:container lg:mt-[12vw]">
       <div className="content">
-        <h1 >Hello, my name is Carl Martens.</h1>
-        <p className="lede">
+        <h1 className="heading--h1 font-bold leading-none tracking-tight mb-12" >Hello, my name is Carl Martens.</h1>
+        <p className="lede font-light">
           I'm a senior designer and front-end developer living in the Twin Cities. I've been working in the web industry for over 14 years and am passionate about my craft. Creating beautiful interfaces that fit seamlessly into websites and applications is what drives me each day. Feel free to write me for work inquiries.
         </p>
         <nav className="nav">
