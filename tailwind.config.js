@@ -5,13 +5,18 @@ module.exports = {
     "./src/pages/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '768px',
+      md: '1024px',
+      lg: '1280px',
+    },
     container: {
       center: true,
       padding: '2rem',
       screens: {
-        sm: '728px',
-        md: '984px',
-        ld: '1200px',
+        // sm: '768px',
+        // md: '1024px',
+        lg: '1280px',
       },
     },
     fontWeight: {
