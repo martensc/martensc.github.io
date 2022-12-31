@@ -27,5 +27,5 @@ label {
 }
 
 .external {
-  @apply after:content-[''] after:w-[0.7rem] after:h-[0.7rem] after:bg-[url('../images/icon-external.svg')] after:bg-no-repeat after:bg-contain after:translate-y-2;
+  @apply after:content-[''] after:w-[0.7rem] after:h-[0.7rem] after:bg-[url('../images/icon-external.svg')] after:bg-no-repeat after:bg-contain after:translate-y-2 dark:after:brightness-0 dark:after:invert;
 }
