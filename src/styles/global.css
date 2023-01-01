@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:focus {
+  border-radius: 1px;
+  outline: dashed;
+  outline-offset: 0.1rem;
+}
+
+a {
+ @apply underline decoration-dashed underline-offset-4 hover:no-underline;
+}
+
+label {
+  font-size: clamp(1rem, 0.9217rem + 0.3478vw, 1.2rem);
+}
+
+.h1 {
+  font-size: clamp(2.5rem, 1.3261rem + 5.2174vw, 5.5rem);
+  max-width: 12ch;
+}
+
+.lede {
+  font-size: clamp(1.2rem, 0.8870rem + 1.3913vw, 2rem);
+  max-width: 40ch;
+}
+
+.external {
+  @apply after:content-[''] after:w-[0.7rem] after:h-[0.7rem] after:bg-[url('../images/icon-external.svg')] after:bg-no-repeat after:bg-contain after:translate-y-2 dark:after:brightness-0 dark:after:invert;
+}
