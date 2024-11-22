@@ -1,0 +1,20 @@
+{% set title = '11twyg' %}
+{% set tagline = 'Eleventy with Twig and YAML Support' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+  {% include 'header.twig' with {
+    title: site.name,
+    tagline: site.tagline
+  } %}
+  <footer>
+    Copyright © Whoever {{ getYear() }}
+  </footer>
+</body>
+</html>
