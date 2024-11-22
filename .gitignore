@@ -1,4 +1,4 @@
 node_modules/
 .cache/
-public
+_site
 *.DS_Store
