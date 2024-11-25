@@ -1,0 +1,28 @@
+{% set title = "Carl Martens | Contact" %}
+
+{% extends "../templates/_template.twig" %}
+
+{% block content %}
+  <h1>Let's talk.</h1>
+  <p class="lede">Write a quick email and I'll get back to you as soon as I can. Thank you.</p>
+  <form method="post" action="https://formspree.io/carlrmartens@gmail.com">
+    <div class="form-row">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" name="name"/>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="_replyto"/>
+    </div>
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea id="message" type="text" name="message"></textarea>
+    </div>
+    <input type="text" name="_gotcha" style="display: none;"/>
+    <div class="form-row">
+      <input type="submit" value="Send" class="button"/>
+    </div>
+    <input type="hidden" name="_next" value="/thank-you"/>
+  </form>
+  <p>On second thought, take me to the <a href="/">Homepage</a>.</p>
+{% endblock %}

@@ -8,6 +8,7 @@
 
   --primary-color: hsl(222, 47%, 11%);
   --secondary-color: hsl(210, 40%, 96%);
+  --foucs: hsl(199, 89%, 48%);
   --container: 1200px;
   --lineheight-nomral: 1.2;
   --lineheight-tall: 1.5;
@@ -128,8 +129,16 @@ textarea {
   display: block;
   width: -webkit-fill-available;
   max-width: 50ch;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border-bottom: 2px solid var(--primary-color);
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--foucs);
 }
 
 @media (min-width: 1280px) {
@@ -137,7 +146,7 @@ textarea {
   input[type='email'],
   select,
   textarea {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 }
 

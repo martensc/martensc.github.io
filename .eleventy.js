@@ -31,10 +31,6 @@ module.exports = function(eleventyConfig) {
     },
   });
   twig.cache(false);
-  twig.extendFunction('getYear', () => {
-    let date = new Date();
-    return date.getFullYear();
-  });
   return {
     markdownTemplateEngine: 'twig',
     htmlTemplateEngine: 'twig',
