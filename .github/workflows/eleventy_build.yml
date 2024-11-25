@@ -1,5 +1,10 @@
 name: Eleventy Build
-on: [ push ]
+on:
+  push:
+    branches:
+    - eleventy
+  pull_request:
+
 
 jobs:
   build_deploy:
@@ -10,6 +15,7 @@ jobs:
       uses: TartanLlama/actions-eleventy@v1.3
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/eleventy'
       with:
         publish_dir: _site
         publish_branch: gh-pages
