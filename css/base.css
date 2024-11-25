@@ -1,0 +1,7 @@
+:root {
+  --c-bg: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--c-bg);
+}
