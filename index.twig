@@ -1,10 +1,14 @@
 {% set title = "Carl Martens | Designer and Front-end Developer" %}
+{% set currentYear = "now" | date("Y") %}
+{% set yearsWorking = currentYear - 2008 %}
+
+{% set metaDesc = "I'm a senior designer and front-end developer based in the Twin Cities, with over " ~ yearsWorking ~ " years of experience in the web industry." %}
 
 {% extends "./templates/_template.twig" %}
 
 {% block content %}
   <h1 >Hello, my name is Carl Martens</h1>
-  <p class="lede">I'm a senior designer and front-end developer based in the Twin Cities, with over {{ currentYear - 2008 }} years of experience in the web industry. Crafting elegant, intuitive interfaces that seamlessly integrate into websites and applications is my passion. Each day, I’m driven by the challenge of combining beauty and functionality to create exceptional user experiences.</p>
+  <p class="lede">I'm a senior designer and front-end developer based in the Twin Cities, with over {{ yearsWorking }} years of experience in the web industry. Crafting elegant, intuitive interfaces that seamlessly integrate into websites and applications is my passion. Each day, I’m driven by the challenge of combining beauty and functionality to create exceptional user experiences.</p>
   <nav class="nav">
     <a href="/contact">Let's Talk</a>
     <a href="https://github.com/martensc/" target="_blank" class="external">GitHub</a>
