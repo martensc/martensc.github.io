@@ -10,9 +10,9 @@ jobs:
   build_deploy:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@eleventy
+    - uses: actions/checkout@master
     - name: Build
-      uses: TartanLlama/actions-eleventy@v1.3
+      uses: TartanLlama/actions-eleventy@master
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/eleventy'
