@@ -2,6 +2,9 @@ const twig = require('twig');
 const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
+  // Images
+  eleventyConfig.addPassthroughCopy("img");
+
   // CSS
   eleventyConfig.addPassthroughCopy({
     "./node_modules/normalize.css/normalize.css": "./css/normalize.css"

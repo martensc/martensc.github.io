@@ -1,22 +1,13 @@
-{% set title = '11twyg' %}
-{% set tagline = 'Eleventy with Twig and YAML Support' %}
+{% set title = "Carl Martens | Designer and Front-end Developer" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/base.css">
-</head>
-<body>
-  {% include 'header.twig' with {
-    title: site.name,
-    tagline: site.tagline
-  } %}
-  <footer>
-    Copyright © Whoever {{ getYear() }}
-  </footer>
-</body>
-</html>
+{% extends "./templates/_template.twig" %}
+
+{% block content %}
+  <h1 >Hello, my name is Carl Martens</h1>
+  <p class="lede">I'm a senior designer and front-end developer living in the Twin Cities. I've been working in the web industry for over {{ currentYear - 2008 }} years and am passionate about my craft. Creating beautiful interfaces that fit seamlessly into websites and applications is what drives me each day. Feel free to write me for work inquiries.</p>
+  <nav class="nav">
+    <a href="/contact">Let's Talk</a>
+    <a href="https://github.com/martensc/" target="_blank" class="external">GitHub</a>
+    <a href="https://www.linkedin.com/in/carlrmartens/" target="_blank" class="external">LinkedIn</a>
+  </nav>
+{% endblock %}
