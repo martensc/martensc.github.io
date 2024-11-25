@@ -186,17 +186,25 @@ input[type='submit']:focus {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   font-size: clamp(1rem, 1.295rem, 1.2rem);
   margin-block-start: 5em;
+}
+
+@media (min-width: 992px) {
+  .nav {
+    gap: 2rem;
+  }
 }
 
 .nav a {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  white-space: nowrap;
 }
 
 /* =============================================
