@@ -3,6 +3,9 @@ const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
   // Images
+  eleventyConfig.addPassthroughCopy("CNAME");
+
+  // Images
   eleventyConfig.addPassthroughCopy("img");
 
   // CSS
