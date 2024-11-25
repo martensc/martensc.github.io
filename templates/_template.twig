@@ -1,0 +1,11 @@
+{% set currentYear = "now" | date("Y") %}
+
+{% include "_head.twig" %}
+  <main class="main container">
+    <div class="content">
+      {% block content %}
+        <p>Page content here.
+      {% endblock %}
+    </div>
+  </main>
+{% include "_foot.twig" %}
