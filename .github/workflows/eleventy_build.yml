@@ -15,7 +15,6 @@ jobs:
       uses: TartanLlama/actions-eleventy@master
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/eleventy'
       with:
         publish_dir: _site
         publish_branch: gh-pages
