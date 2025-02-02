@@ -2,20 +2,38 @@
 // Globals
 // ============================================= */
 :root {
+  /* Breakpoints */
   --bp1: 767px;
 	--bp2: 992px;
   --bp3: 1200px;
 
+  /* Colors */
   --primary-color: hsl(222, 47%, 11%);
   --secondary-color: hsl(210, 40%, 96%);
-  --foucs: hsl(199, 89%, 48%);
+  --focus: hsl(199, 89%, 48%);
+
+  /* Layout */
   --container: 1200px;
+
+  /* Typography */
   --lineheight-nomral: 1.2;
   --lineheight-tall: 1.5;
   --lineheight-tight: 1;
   --track-in: -0.025em;
-
   font-size: 1.0625rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: hsl(210, 40%, 96%);
+    --secondary-color: hsl(222, 47%, 11%);
+  }
+}
+
+::selection {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 body {
@@ -138,7 +156,7 @@ input[type='email']:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-bottom: 2px solid var(--foucs);
+  border-bottom: 2px solid var(--focus);
 }
 
 @media (min-width: 1280px) {
@@ -205,57 +223,4 @@ input[type='submit']:focus {
   align-items: center;
   gap: 0.25rem;
   white-space: nowrap;
-}
-
-/* =============================================
-// Dark Mode
-// ============================================= */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-  }
-
-  a {
-    color: var(--secondary-color);
-  }
-
-  .external::after {
-    background-color: var(--secondary-color);
-  }
-
-  fieldset,
-  input,
-  legend,
-  select,
-  textarea,
-  button {
-    color: var(--secondary-color);
-  }
-
-  input[type='text'],
-  input[type='email'],
-  select,
-  textarea {
-    border-color: var(--secondary-color);
-  }
-
-  textarea {
-    min-height: 3rem;
-  }
-
-  button,
-  input[type='submit'] {
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-  }
-
-  button:hover,
-  button:focus,
-  input[type='submit']:hover,
-  input[type='submit']:focus {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: var(--primary-color);
-  }
 }
