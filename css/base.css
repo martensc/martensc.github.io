@@ -8,7 +8,7 @@
 
   --primary-color: hsl(222, 47%, 11%);
   --secondary-color: hsl(210, 40%, 96%);
-  --foucs: hsl(199, 89%, 48%);
+  --focus: hsl(199, 89%, 48%);
   --container: 1200px;
   --lineheight-nomral: 1.2;
   --lineheight-tall: 1.5;
@@ -16,6 +16,11 @@
   --track-in: -0.025em;
 
   font-size: 1.0625rem;
+}
+
+::selection {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 body {
@@ -138,7 +143,7 @@ input[type='email']:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-bottom: 2px solid var(--foucs);
+  border-bottom: 2px solid var(--focus);
 }
 
 @media (min-width: 1280px) {
@@ -211,6 +216,11 @@ input[type='submit']:focus {
 // Dark Mode
 // ============================================= */
 @media (prefers-color-scheme: dark) {
+  ::selection {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+
   body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
