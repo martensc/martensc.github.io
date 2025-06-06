@@ -20,6 +20,12 @@ module.exports = function(eleventyConfig) {
     return yaml.load(contents);
   });
 
+  // Set a path for deploying to a subdirectory
+  // If your site will be at the root of your domain (e.g., example.com),
+  // you can leave this as '/' or set it to an empty string ''.
+  // If your site will be at example.com/blog/, set this to '/blog/'.
+  eleventyConfig.addGlobalData("path", "/"); // Default to root
+
   // Twig
   eleventyConfig.addTemplateFormats('twig');
   eleventyConfig.addExtension('twig', {
@@ -37,6 +43,10 @@ module.exports = function(eleventyConfig) {
   return {
     markdownTemplateEngine: 'twig',
     htmlTemplateEngine: 'twig',
-    templateFormats: ['twig', 'html', 'md']
+    templateFormats: ['twig', 'html', 'md'],
+    dir: {
+      input: "src", // Your source directory (e.g., where your Twig files are)
+      output: "_site" // Your output directory
+    }
   };
 };
