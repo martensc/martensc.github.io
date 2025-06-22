@@ -46,7 +46,9 @@ module.exports = function(eleventyConfig) {
     templateFormats: ['twig', 'html', 'md'],
     dir: {
       input: "src", // Your source directory (e.g., where your Twig files are)
-      output: "_site" // Your output directory
+      output: "_site", // Your output directory
+      includes: "_includes", // Directory for includes
+      data: "_data"
     }
   };
 };
