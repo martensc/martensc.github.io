@@ -4,7 +4,7 @@
 :root {
   /* Breakpoints */
   --bp1: 767px;
-	--bp2: 992px;
+  --bp2: 992px;
   --bp3: 1200px;
 
   /* Colors */
@@ -16,7 +16,7 @@
   --container: 1200px;
 
   /* Typography */
-  --lineheight-nomral: 1.2;
+  --lineheight-normal: 1.2;
   --lineheight-tall: 1.5;
   --lineheight-tight: 1;
   --track-in: -0.025em;
@@ -39,7 +39,7 @@ body {
   color: var(--primary-color);
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  line-height: var(--lineheight-nomral);
+  line-height: var(--lineheight-normal);
 }
 
 .container {
