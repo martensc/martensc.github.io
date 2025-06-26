@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss css/styles.css -o _site/css/styles.css",
-    "watch:css": "postcss css/styles.css -o _site/css/styles.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "NODE_ENV=production postcss css/styles.css -o _site/css/styles.css --map",
+    "watch:css": "NODE_ENV=development postcss css/styles.css -o _site/css/styles.css --watch --map",
     "clean": "rm -r _site",
     "start": "npm run watch:css & eleventy --serve",
     "build": "npm run build:css && eleventy"
