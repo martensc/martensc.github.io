@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build:css": "postcss css/styles.css -o _site/css/styles.css",
+    "watch:css": "postcss css/styles.css -o _site/css/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r _site",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "npm run watch:css & eleventy --serve",
+    "build": "npm run build:css && eleventy"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +16,12 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
     "js-yaml": "^4.1.0",
     "normalize.css": "^8.0.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "twig": "^1.17.1"
   }
 }

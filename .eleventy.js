@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/normalize.css/normalize.css": "./css/normalize.css"
   });
-  eleventyConfig.addPassthroughCopy("./css/base.css");
+  // eleventyConfig.addPassthroughCopy("./css/base.css");
+  eleventyConfig.addPassthroughCopy("./_site/css");
   eleventyConfig.addWatchTarget("./css/");
 
   // YML
@@ -45,9 +46,9 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: 'twig',
     templateFormats: ['twig', 'html', 'md'],
     dir: {
-      input: "src", // Your source directory (e.g., where your Twig files are)
-      output: "_site", // Your output directory
-      includes: "_includes", // Directory for includes
+      input: "src",
+      output: "_site",
+      includes: "_includes",
       data: "_data"
     }
   };
