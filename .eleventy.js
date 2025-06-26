@@ -12,8 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/normalize.css/normalize.css": "./css/normalize.css"
   });
-  // eleventyConfig.addPassthroughCopy("./css/base.css");
-  eleventyConfig.addPassthroughCopy("./_site/css/styles.css"); // Copy all CSS from source
+  eleventyConfig.addPassthroughCopy("./_site/css/styles.css");
   eleventyConfig.addWatchTarget("./css/");
 
   // YML
