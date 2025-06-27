@@ -1,15 +1,16 @@
 ---
 permalink: /contact/index.html
+data: contact
 ---
 
-{% set title = "Carl Martens | Contact" %}
-{% set metaDesc = "Write a quick email and I'll get back to you as soon as I can." %}
+{% set metaTitle = contact.metaTitle %}
+{% set metaDesc = contact.metaDesc %}
 
 {% extends "../../_includes/_template.twig" %}
 
 {% block content %}
-  <h1>Let's talk.</h1>
-  <p class="lede">Write a quick email and I'll get back to you as soon as I can. Thank you.</p>
+  <h1>{{ contact.title }}</h1>
+  <p class="lede">{{ contact.desc }}</p>
   <form method="post" action="https://formspree.io/carlrmartens@gmail.com">
     <div class="form-row">
       <label for="name">Full Name</label>

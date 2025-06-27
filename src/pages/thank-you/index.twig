@@ -1,14 +1,15 @@
 ---
 permalink: /thank-you/index.html
+data: thank_you
 ---
 
-{% set title = "Carl Martens | Thank You" %}
+{% set metaTitle = thank_you.metaTitle %}
 {% set noindex = true %}
 
 {% extends "../../_includes/_template.twig" %}
 
 {% block content %}
-  <h1>Thank you for reaching out.</h1>
-  <p class="lede">I will get back to you as soon as possible.</p>
+  <h1>{{ thank_you.title }}</h1>
+  <p class="lede">{{ thank_you.desc }}</p>
   <p>Head to the <a href="{{ path }}">Homepage</a>.</p>
 {% endblock %}
