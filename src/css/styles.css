@@ -1,5 +1,11 @@
 @import "normalize.css";
+
+/* Base styles */
 @import "partials/_variables.css";
 @import "partials/_base.css";
 @import "partials/_typography.css";
 @import "partials/_forms.css";
+
+/* Elements */
+@import "../_includes/elements/button/button.css";
+@import "../_includes/elements/image/image.css";
