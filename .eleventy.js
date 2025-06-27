@@ -6,13 +6,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
 
   // Images
-  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("src/img");
 
   // CSS
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/normalize.css/normalize.css": "./src/css/normalize.css"
-  });
-  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("src/css/");
 
   // YML
   eleventyConfig.addDataExtension('yml, yaml', (contents) => {
@@ -20,9 +17,6 @@ module.exports = function(eleventyConfig) {
   });
 
   // Set a path for deploying to a subdirectory
-  // If your site will be at the root of your domain (e.g., example.com),
-  // you can leave this as '/' or set it to an empty string ''.
-  // If your site will be at example.com/blog/, set this to '/blog/'.
   eleventyConfig.addGlobalData("path", "/"); // Default to root
 
   // Twig

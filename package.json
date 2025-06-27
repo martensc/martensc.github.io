@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "NODE_ENV=production postcss src/css/styles.css -o _site/css/styles.css --map",
+    "build:css": "NODE_ENV=production postcss src/css/styles.css -o _site/css/styles.css --no-map",
     "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.css --watch --map",
     "clean": "rm -r _site",
     "start": "npm run watch:css & eleventy --serve",
