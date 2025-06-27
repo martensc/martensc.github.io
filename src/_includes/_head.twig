@@ -17,8 +17,12 @@
     {% else %}
       <meta name="robots" content="index, follow">
     {% endif %}
-    <title>{{ metaTitle }}</title>
-    <link rel="icon" href="{{ path }}img/icon.png" type="image/png">
+    <title>{{ site.siteName }} | {{ metaTitle }}</title>
+    <link rel="icon" type="image/png" href="{{ path }}img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ path }}img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ path }}img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ path }}img/favicon-16x16.png">
+    <link rel="manifest" href="{{ path }}site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">

@@ -2,10 +2,9 @@ const twig = require('twig');
 const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
-  // Images
-  eleventyConfig.addPassthroughCopy("CNAME");
-
-  // Images
+  // Copy static files
+  eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/img");
 
   // CSS
