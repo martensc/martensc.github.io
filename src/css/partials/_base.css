@@ -11,6 +11,24 @@ body {
   line-height: var(--lineheight-normal);
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 4px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    border-radius: 1px;
+    outline: dashed;
+    outline-offset: 0.1rem;
+  }
+}
+
 .container {
   max-width: var(--container);
   margin-inline: auto;

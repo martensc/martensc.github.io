@@ -10,10 +10,9 @@ module.exports = function(eleventyConfig) {
 
   // CSS
   eleventyConfig.addPassthroughCopy({
-    "./node_modules/normalize.css/normalize.css": "./css/normalize.css"
+    "./node_modules/normalize.css/normalize.css": "./src/css/normalize.css"
   });
-  eleventyConfig.addPassthroughCopy("./_site/css/styles.css");
-  eleventyConfig.addWatchTarget("./css/");
+  eleventyConfig.addWatchTarget("./src/css/");
 
   // YML
   eleventyConfig.addDataExtension('yml, yaml', (contents) => {
