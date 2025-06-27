@@ -1,0 +1,9 @@
+{% set noindex = true %}
+
+{% extends "../../_includes/_template.twig" %}
+
+{% block content %}
+  <h1>{{ pageTitle }}</h1>
+  <p class="lede">{{ desc }}</p>
+  <p>Head to the <a href="{{ path }}">Homepage</a>.</p>
+{% endblock %}

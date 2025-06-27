@@ -16,8 +16,7 @@ fieldset,
 input,
 legend,
 select,
-textarea,
-button {
+textarea {
   color: var(--primary-color);
   appearance: none;
   background-color: transparent;
@@ -49,19 +48,4 @@ textarea {
 
 textarea {
   max-width: 95ex;
-}
-
-button,
-input[type='submit'] {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 1rem 2rem;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--secondary-color);
-  }
 }
