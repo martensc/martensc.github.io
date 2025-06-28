@@ -3,8 +3,8 @@ h1 {
   margin-block: 0 0.75em;
   font-weight: 750;
   font-size: clamp(2.5rem, 1.552rem + 4.21vw, 5.5rem);
-  line-height: var(--lineheight-tight);
-  letter-spacing: var(--track-in);
+  line-height: var(--f-lineheight-tight);
+  letter-spacing: var(--f-letter-spacing-in);
 }
 
 .lede {
@@ -12,14 +12,14 @@ h1 {
   margin-block: 1em;
   font-weight: 350;
   font-size: clamp(1.1rem, 0.571rem + 1.904vw, 2rem);
-  line-height: var(--lineheight-tall);
+  line-height: var(--f-lineheight-tall);
 }
 
 .external::after {
   width: 0.7rem;
   height: 0.7rem;
   transform: translateY(-0.2rem);
-  background-color: var(--primary-color);
+  background-color: var(--c-primary);
   content: '';
   mask-image: url('../img/icon-external.svg');
   mask-repeat: no-repeat;

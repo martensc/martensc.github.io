@@ -23,7 +23,7 @@ textarea {
   border: none;
   border-radius: 0;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--c-primary);
 }
 
 input[type='text'],
@@ -34,14 +34,14 @@ textarea {
   width: -webkit-fill-available;
   max-width: 65ex;
   padding: 0.5rem 0;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--c-primary);
 
   @media (min-width: 1280px) {
     padding: 1rem 0;
   }
 
   &:focus {
-    border-bottom: 2px solid var(--focus);
+    border-bottom: 2px solid var(--c-focus);
     outline: none;
   }
 }
