@@ -1,5 +1,5 @@
 h1 {
-  max-width: 15ex;
+  max-width: 16ex;
   line-height: var(--lineheight-tight);
   font-size: clamp(2.5rem, 1.552rem + 4.210vw, 5.5rem);
   font-weight: 750;
@@ -9,7 +9,7 @@ h1 {
 
 .lede {
   max-width: 55ex;
-  font-size: clamp(1rem, 0.571rem + 1.904vw, 2rem);
+  font-size: clamp(1.1rem, 0.571rem + 1.904vw, 2rem);
   font-weight: 350;
   line-height: var(--lineheight-tall);
   margin-block: 1em;
