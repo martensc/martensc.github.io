@@ -7,5 +7,5 @@
 @import "partials/_forms.css";
 
 /* Elements */
-@import "../_includes/elements/button/button.css";
-@import "../_includes/elements/image/image.css";
+@import "../_includes/02-elements/button/button.css";
+@import "../_includes/02-elements/image/image.css";
