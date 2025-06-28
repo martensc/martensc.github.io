@@ -1,27 +1,27 @@
 h1 {
-  max-width: 15ex;
-  line-height: var(--lineheight-tight);
-  font-size: clamp(2.5rem, 1.552rem + 4.210vw, 5.5rem);
-  font-weight: 750;
-  letter-spacing: var(--track-in);
+  max-width: 16ex;
   margin-block: 0 0.75em;
+  font-weight: 750;
+  font-size: clamp(2.5rem, 1.552rem + 4.21vw, 5.5rem);
+  line-height: var(--lineheight-tight);
+  letter-spacing: var(--track-in);
 }
 
 .lede {
   max-width: 55ex;
-  font-size: clamp(1rem, 0.571rem + 1.904vw, 2rem);
-  font-weight: 350;
-  line-height: var(--lineheight-tall);
   margin-block: 1em;
+  font-weight: 350;
+  font-size: clamp(1.1rem, 0.571rem + 1.904vw, 2rem);
+  line-height: var(--lineheight-tall);
 }
 
 .external::after {
-  content: '';
   width: 0.7rem;
   height: 0.7rem;
-  background-color: var(--primary-color);
-  mask-image: url('../img/icon-external.svg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
   transform: translateY(-0.2rem);
+  background-color: var(--primary-color);
+  content: '';
+  mask-image: url('../img/icon-external.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
