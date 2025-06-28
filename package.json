@@ -6,7 +6,8 @@
     "build:css": "NODE_ENV=production postcss src/css/styles.css -o _site/css/styles.min.css --no-map",
     "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.min.css --watch --map",
     "clean": "rm -r _site",
-    "start": "npm run watch:css & eleventy --serve",
+    "prettier:check": "npx prettier --check \"src/**/*.css\"",
+    "start": "npm run prettier:check && npm run watch:css & eleventy --serve",
     "build": "npm run build:css && eleventy"
   },
   "keywords": [],
@@ -22,6 +23,8 @@
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-css-order": "^2.1.2",
     "twig": "^1.17.1"
   }
 }
