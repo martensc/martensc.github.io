@@ -1,18 +1,18 @@
 ::selection {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--c-secondary);
+  color: var(--c-primary);
   font-weight: 400;
-  line-height: var(--lineheight-normal);
+  line-height: var(--f-lineheight-normal);
   font-family: 'Outfit', sans-serif;
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--c-primary);
   text-decoration: underline;
   text-decoration-style: dashed;
   text-underline-offset: 4px;

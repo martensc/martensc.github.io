@@ -1,27 +1,27 @@
 :root {
   /* Breakpoints */
-  --bp1: 767px;
-  --bp2: 992px;
-  --bp3: 1200px;
+  --bp-mobile: 767px;
+  --bp-tablet: 992px;
+  --bp-desktop: 1200px;
 
   /* Colors */
-  --primary-color: hsl(222, 47%, 11%);
-  --secondary-color: hsl(210, 40%, 96%);
-  --focus: hsl(199, 89%, 48%);
+  --c-primary: hsl(222, 47%, 11%);
+  --c-secondary: hsl(210, 40%, 96%);
+  --c-focus: hsl(199, 89%, 48%);
 
   /* Layout */
   --container: 1200px;
 
   /* Typography */
-  --lineheight-normal: 1.2;
-  --lineheight-tall: 1.5;
-  --lineheight-tight: 1;
-  --track-in: -0.025em;
+  --f-lineheight-normal: 1.2;
+  --f-lineheight-tall: 1.5;
+  --f-lineheight-tight: 1;
+  --f-letter-spacing-in: -0.025em;
   font-size: 1.0625rem;
 
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
-    --primary-color: hsl(210, 40%, 96%);
-    --secondary-color: hsl(222, 47%, 11%);
+    --c-primary: hsl(210, 40%, 96%);
+    --c-secondary: hsl(222, 47%, 11%);
   }
 }

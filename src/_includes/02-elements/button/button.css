@@ -4,16 +4,16 @@ input[type='submit'] {
   appearance: none;
   margin: 0;
   padding: 1rem 2rem;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--c-primary);
   border-radius: 0;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--c-primary);
   cursor: pointer;
 
   &:hover,
   &:focus {
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    border-color: var(--c-primary);
+    background-color: var(--c-primary);
+    color: var(--c-secondary);
   }
 }
