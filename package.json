@@ -5,12 +5,16 @@
   "scripts": {
     "build:css": "NODE_ENV=production postcss src/css/styles.css -o _site/css/styles.min.css --no-map",
     "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.min.css --watch --map",
-    "clean": "rm -r _site",
-    "prettier:check": "npx prettier --check \"src/**/*.css\"",
+    "build:eleventy": "eleventy",
+    "clean": "rm -rf _site encrypted",
+    "prettier:check": "prettier --check \"src/**/*.css\"",
+    "prettier:fix": "prettier --write \"src/**/*.css\"",
     "encrypt:work": "bash -c 'for file in _site/work.html $(find _site/work -name \"*.html\" -type f); do npx staticrypt \"$file\" -d \"$(dirname \"$file\")\" -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"; done'",
-    "start": "npm run prettier:check && npm run watch:css & eleventy --serve",
-    "start:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
-    "build": "npm run build:css && eleventy && npm run encrypt:work && rsync -av _site/ encrypted/"
+    "dev": "npm run prettier:check && npm run watch:css & eleventy --serve",
+    "dev:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
+    "start": "npm run dev",
+    "start:encrypted": "npm run dev:encrypted",
+    "build": "npm run clean && npm run build:css && npm run build:eleventy && npm run encrypt:work && rsync -av _site/ encrypted/"
   },
   "keywords": [],
   "author": "",
