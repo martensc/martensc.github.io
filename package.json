@@ -7,10 +7,10 @@
     "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.min.css --watch --map",
     "clean": "rm -r _site",
     "prettier:check": "npx prettier --check \"src/**/*.css\"",
-    "encrypt:work": "npx staticrypt _site/work.html _site/work/*.html -r -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"",
+    "encrypt:work": "bash -c 'for file in _site/work.html $(find _site/work -name \"*.html\" -type f); do npx staticrypt \"$file\" -d \"$(dirname \"$file\")\" -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"; done'",
     "start": "npm run prettier:check && npm run watch:css & eleventy --serve",
     "start:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
-    "build": "npm run build:css && eleventy && npm run encrypt:work && rsync -av --exclude='work.html' _site/ encrypted/"
+    "build": "npm run build:css && eleventy && npm run encrypt:work && rsync -av _site/ encrypted/"
   },
   "keywords": [],
   "author": "",
