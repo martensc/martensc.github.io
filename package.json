@@ -10,7 +10,7 @@
     "encrypt:work": "npx staticrypt _site/work.html _site/work/*.html -r -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"",
     "start": "npm run prettier:check && npm run watch:css & eleventy --serve",
     "start:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
-    "build": "npm run build:css && eleventy && npm run encrypt:work"
+    "build": "npm run build:css && eleventy && npm run encrypt:work && rsync -av --exclude='work.html' --exclude='work/' _site/ encrypted/"
   },
   "keywords": [],
   "author": "",
