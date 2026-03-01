@@ -7,8 +7,10 @@
     "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.min.css --watch --map",
     "clean": "rm -r _site",
     "prettier:check": "npx prettier --check \"src/**/*.css\"",
+    "encrypt:work": "npx staticrypt _site/work.html _site/work/*.html -r -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"",
     "start": "npm run prettier:check && npm run watch:css & eleventy --serve",
-    "build": "npm run build:css && eleventy"
+    "start:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
+    "build": "npm run build:css && eleventy && npm run encrypt:work"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,7 @@
     "postcss-import": "^16.1.1",
     "prettier": "^3.8.1",
     "prettier-plugin-css-order": "^2.2.0",
+    "staticrypt": "^3.5.4",
     "twig": "^1.17.1"
   }
 }
