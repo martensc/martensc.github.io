@@ -9,7 +9,7 @@
     "clean": "rm -rf _site encrypted",
     "prettier:check": "prettier --check \"src/**/*.css\"",
     "prettier:fix": "prettier --write \"src/**/*.css\"",
-    "encrypt:work": "bash -c 'for file in _site/work.html $(find _site/work -name \"*.html\" -type f); do npx staticrypt \"$file\" -d \"$(dirname \"$file\")\" -p \"${STATICRYPT_PASSWORD:-my portfolio work}\"; done'",
+    "encrypt:work": "bash -c 'for file in _site/work.html $(find _site/work -name \"*.html\" -type f); do npx staticrypt \"$file\" -d \"$(dirname \"$file\")\" -p \"${STATICRYPT_PASSWORD:-my portfolio work}\" -l \"View Work\"; done'",
     "dev": "npm run prettier:check && npm run watch:css & eleventy --serve",
     "dev:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
     "start": "npm run dev",
@@ -33,5 +33,8 @@
     "prettier-plugin-css-order": "^2.2.0",
     "staticrypt": "^3.5.4",
     "twig": "^1.17.1"
+  },
+  "overrides": {
+    "minimatch": "^3.1.4"
   }
 }
