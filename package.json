@@ -3,38 +3,33 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "NODE_ENV=production postcss src/css/styles.css -o _site/css/styles.min.css --no-map",
-    "watch:css": "NODE_ENV=development postcss src/css/styles.css -o _site/css/styles.min.css --watch --map",
     "build:eleventy": "eleventy",
     "clean": "rm -rf _site encrypted",
     "prettier:check": "prettier --check \"src/**/*.css\"",
     "prettier:fix": "prettier --write \"src/**/*.css\"",
     "encrypt:work": "bash -c 'for file in _site/work.html $(find _site/work -name \"*.html\" -type f); do npx staticrypt \"$file\" -d \"$(dirname \"$file\")\" -p \"${STATICRYPT_PASSWORD:-my portfolio work}\" -l \"View Work\"; done'",
-    "dev": "npm run prettier:check && npm run watch:css & eleventy --serve",
-    "dev:encrypted": "npm run prettier:check && npm run watch:css & ./encrypt-watch.sh & eleventy --serve",
+    "dev": "npm run prettier:check && eleventy --serve",
+    "dev:encrypted": "npm run prettier:check && ./encrypt-watch.sh & eleventy --serve",
     "start": "npm run dev",
     "start:encrypted": "npm run dev:encrypted",
-    "build": "npm run clean && npm run build:css && npm run build:eleventy && npm run encrypt:work && rsync -av _site/ encrypted/"
+    "build": "npm run clean && npm run build:eleventy && npm run encrypt:work && rsync -av _site/ encrypted/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "overrides": {
+    "minimatch": "^3.1.4"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "autoprefixer": "^10.4.27",
-    "cssnano": "^7.1.3",
+    "browserslist": "^4.28.1",
     "js-yaml": "^4.1.1",
+    "lightningcss": "^1.31.1",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.5.8",
-    "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.1",
     "prettier": "^3.8.1",
     "prettier-plugin-css-order": "^2.2.0",
     "staticrypt": "^3.5.4",
     "twig": "^1.17.1"
-  },
-  "overrides": {
-    "minimatch": "^3.1.4"
   }
 }
