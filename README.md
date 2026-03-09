@@ -1,28 +1,43 @@
-## Run the Eleventy Development Server
-This is the primary command you'll use for local development. It builds your site, starts a local web server, and automatically reloads your browser when you make changes to your source files.
+# martensc.github.io
+Personal portfolio site built with [Eleventy](https://www.11ty.dev/).
+
+## Development
+Start the local dev server (runs Prettier check first, then serves with live reload):
 ```bash
-npx @11ty/eleventy --serve
+npm start
+```
+Start with encrypted work section:
+```bash
+npm run start:encrypted
 ```
 
-##  Build the Site (no server)
-If you just want to compile your site to the output directory (default `_site`) without starting a server:
+## Build
+Full production build (clean, build, encrypt work pages, sync to `encrypted/`):
 ```bash
-npx @11ty/eleventy
+npm run build
+```
+Build with Eleventy only (no clean or encrypt):
+```bash
+npm run build:eleventy
+```
+Clean output directories (`_site/` and `encrypted/`):
+```bash
+npm run clean
 ```
 
-## Build and Watch for Changes (no server)
-If you want Eleventy to automatically rebuild your site whenever you save files, but you're using your own web server or just want the files to be updated:
+## Code Quality
+Check CSS formatting with Prettier:
 ```bash
-npx @11ty/eleventy --watch
+npm run prettier:check
+```
+Auto-fix CSS formatting with Prettier:
+```bash
+npm run prettier:fix
 ```
 
-## Change the Port
-If port 8080 is already in use, or you prefer a different port:
+## Encryption
+Encrypt the work portfolio pages with [StatiCrypt](https://github.com/robinmoisson/staticrypt):
 ```bash
-npx @11ty/eleventy --serve --port=8081
+npm run encrypt:work
 ```
-
-## Check Eleventy Version
-```bash
-npx @11ty/eleventy --version
-```
+Set the `STATICRYPT_PASSWORD` environment variable to override the default password.
