@@ -12,19 +12,23 @@ body {
 }
 
 a {
+  background-color: var(--c-highlight);
   color: var(--c-primary);
+  transition: background-color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
   text-decoration: underline;
-  text-decoration-style: dashed;
-  text-underline-offset: 4px;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2rem;
 
   &:hover,
   &:focus {
-    text-decoration: none;
+    background-color: var(--c-highlight-focus);
+    text-decoration: underline;
+    text-decoration-color: var(--c-focus);
   }
 
   &:focus {
-    border-radius: 1px;
-    outline: dashed;
+    outline: solid;
+    outline-color: var(--c-focus);
     outline-offset: 0.1rem;
   }
 }

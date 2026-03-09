@@ -8,6 +8,8 @@
   --c-primary: hsl(222, 47%, 11%);
   --c-secondary: hsl(210, 40%, 96%);
   --c-focus: hsl(199, 89%, 48%);
+  --c-highlight: hsl(194, 61%, 89%);
+  --c-highlight-focus: hsl(194, 65%, 84%);
 
   /* Layout */
   --container: 1200px;
@@ -23,5 +25,7 @@
   @media (prefers-color-scheme: dark) {
     --c-primary: hsl(210, 40%, 96%);
     --c-secondary: hsl(222, 47%, 11%);
+    --c-highlight: hsl(222, 62%, 20%);
+    --c-highlight-focus: hsl(222, 54%, 30%);
   }
 }
