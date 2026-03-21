@@ -28,8 +28,8 @@ a {
 
   &:focus {
     outline: dashed;
-    outline-color: var(--c-focus);
-    outline-offset: 0.3rem;
+    outline-color: var(--c-primary);
+    outline-offset: 0.2rem;
   }
 }
 
