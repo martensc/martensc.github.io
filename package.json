@@ -30,6 +30,6 @@
     "prettier": "^3.8.1",
     "prettier-plugin-css-order": "^2.2.0",
     "staticrypt": "^3.5.4",
-    "twig": "^1.17.1"
+    "twig": "^2.0.0"
   }
 }
