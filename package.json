@@ -22,14 +22,14 @@
     "minimatch": "^3.1.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy": "^3.1.5",
     "browserslist": "^4.28.1",
     "js-yaml": "^4.1.1",
-    "lightningcss": "^1.31.1",
+    "lightningcss": "^1.32.0",
     "normalize.css": "^8.0.1",
     "prettier": "^3.8.1",
     "prettier-plugin-css-order": "^2.2.0",
     "staticrypt": "^3.5.4",
-    "twig": "^1.17.1"
+    "twig": "^2.0.0"
   }
 }

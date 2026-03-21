@@ -9,7 +9,7 @@
   --c-secondary: hsl(210, 40%, 96%);
   --c-focus: hsl(199, 89%, 48%);
   --c-highlight: hsl(194, 61%, 89%);
-  --c-highlight-focus: hsl(194, 65%, 84%);
+  --c-highlight-focus: hsl(0, 0%, 100%);
 
   /* Layout */
   --container: 1200px;
