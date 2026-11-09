@@ -18,18 +18,21 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=22"
+  },
   "overrides": {
     "minimatch": "^3.1.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
-    "browserslist": "^4.28.1",
-    "js-yaml": "^4.1.1",
-    "lightningcss": "^1.32.0",
+    "@11ty/eleventy": "^3.1.8",
+    "browserslist": "^4.29.5",
+    "js-yaml": "^4.3.2",
+    "lightningcss": "^1.33.0",
     "normalize.css": "^8.0.1",
-    "prettier": "^3.8.1",
+    "prettier": "^3.9.10",
     "prettier-plugin-css-order": "^2.2.0",
     "staticrypt": "^3.5.4",
-    "twig": "^2.0.0"
+    "twig": "^3.0.0"
   }
 }
